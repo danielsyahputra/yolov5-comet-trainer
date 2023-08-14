@@ -342,8 +342,8 @@ def check_git_status(repo='ultralytics/yolov5', branch='master'):
     url = f'https://github.com/{repo}'
     msg = f', for updates see {url}'
     s = colorstr('github: ')  # string
-    assert Path('.git').exists(), s + 'skipping check (not a git repository)' + msg
-    assert check_online(), s + 'skipping check (offline)' + msg
+    # assert Path('.git').exists(), s + 'skipping check (not a git repository)' + msg
+    # assert check_online(), s + 'skipping check (offline)' + msg
 
     splits = re.split(pattern=r'\s', string=check_output('git remote -v', shell=True).decode())
     matches = [repo in s for s in splits]

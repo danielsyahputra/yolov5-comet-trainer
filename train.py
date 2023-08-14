@@ -27,18 +27,18 @@ def main(**kwargs):
     config = read_config(kwargs["config"])
     opt = train.parse_opt(True)
     for k, v in config.items():
-        if k in ["weights", "data"]:
+        if k in ["weights", "data", "hyp"]:
             v = Path(ROOT, v)
         setattr(opt, k, v)
     
-    # experiment = Experiment(
-    #     api_key='7DE8EZJwDwczUd8gpo7zOOpwz',
-    #     project_name='example',
-    #     workspace="danielsyahputra"
-    # )
-    # experiment.set_name(opt.name)
-    # train.main(opt)
-    print(opt)
+    experiment = Experiment(
+        api_key='7DE8EZJwDwczUd8gpo7zOOpwz',
+        project_name='example',
+        workspace="danielsyahputra"
+    )
+    experiment.set_name(opt.name)
+    train.main(opt)
+    # print(opt)
 
 if __name__=="__main__":
 

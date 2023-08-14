@@ -171,8 +171,6 @@ class DetectionModel(BaseModel):
         else:  # is *.yaml
             import yaml  # for torch hub
             self.yaml_file = Path(cfg).name
-            print(self.yaml_file)
-            print(Path(cfg).name)
             with open(cfg, encoding='ascii', errors='ignore') as f:
                 self.yaml = yaml.safe_load(f)  # model dict
 

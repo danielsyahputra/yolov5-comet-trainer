@@ -4,5 +4,5 @@ params:
   batch_size: 4
   epochs: 2
   data: "./dataset/data.yaml"
-  weights: "yolov5s"
-  name: "coba_coba"
+  weights: "yolov5s.pt"
+  name: "yolov5s_wheel"

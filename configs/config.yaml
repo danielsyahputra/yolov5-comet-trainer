@@ -1,0 +1,8 @@
+
+params:
+  imgsz: 640
+  batch_size: 4
+  epochs: 2
+  data: "./dataset/data.yaml"
+  weights: "yolov5s"
+  name: "coba_coba"

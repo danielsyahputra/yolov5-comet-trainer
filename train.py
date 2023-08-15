@@ -30,13 +30,6 @@ def main(**kwargs):
         if k in ["weights", "data", "hyp"]:
             v = Path(ROOT, v)
         setattr(opt, k, v)
-    
-    experiment = Experiment(
-        api_key='7DE8EZJwDwczUd8gpo7zOOpwz',
-        project_name='example',
-        workspace="danielsyahputra"
-    )
-    experiment.set_name(opt.name)
     train.main(opt)
     # print(opt)
 

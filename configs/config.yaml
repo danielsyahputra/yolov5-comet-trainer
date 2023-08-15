@@ -1,8 +1,9 @@
 
 params:
   imgsz: 640
-  batch_size: 4
-  epochs: 2
-  data: "./dataset/data.yaml"
-  weights: "yolov5s.pt"
+  batch_size: 16
+  epochs: 5
+  data: "./dataset/data.yaml" # Define path for dataset
+  weights: "yolov5s.pt" 
   name: "yolov5s_wheel"
+  workers: 0
